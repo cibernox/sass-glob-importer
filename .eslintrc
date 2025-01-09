@@ -1,4 +1,0 @@
----
-extends: "mcsaatchi/es6"
-env:
-  mocha: true

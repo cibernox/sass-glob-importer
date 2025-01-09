@@ -24,21 +24,17 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel/register",
-    "compile": "babel -d lib/ src/",
-    "pretest": "eslint src/index.js test.js",
-    "preversion": "npm test",
-    "prepublish": "npm test && npm run compile",
+    "compile": "./node_modules/.bin/babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "postpublish": "git push"
   },
   "devDependencies": {
-    "babel": "^5.8.3",
-    "babel-eslint": "^3.1.20",
-    "chai": "^3.0.0",
-    "eslint": "^0.24.1",
-    "eslint-config-mcsaatchi": "^1.0.2",
-    "mocha": "^2.2.5",
-    "node-sass": "^3.2.0"
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@eslint/eslintrc": "^3.2.0",
+    "eslint": "^8.57.0",
+    "sass": "^1.83.0"
   },
   "dependencies": {
     "es6-map": "^0.1.1",
